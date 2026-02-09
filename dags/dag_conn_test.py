@@ -10,7 +10,7 @@ with DAG(
     catchup=False
 ) as dag:
 
-    t1 - EmptyOperator(
+    t1 = EmptyOperator(
         task_id="t1"
     )
 

@@ -1,10 +1,10 @@
-from airflow import dag
+from airflow import DAG
 import datetime
 import pendulum
+from airflow.operators.bash import BashOperator
 
 
-
-with DAG(
+with DAG( 
     dag_id="dags_bash_operator",
     schedule= "0 0 * * *",
     start_date=pendulum.datetime(2023, 1, 1, tz="Asia/Seoul"),
